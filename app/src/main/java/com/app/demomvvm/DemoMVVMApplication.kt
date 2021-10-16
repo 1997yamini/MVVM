@@ -20,7 +20,6 @@ class DemoMVVMApplication : Application() {
             modules(modules)
         }
     }
-
     companion object {
         var isAppLive = false
         private var sActiveActivities = 0
