@@ -1,11 +1,12 @@
-package com.app.demomvvm
+package com.app.demomvvm.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.app.demomvvm.R
+import com.app.demomvvm.data.model.response.UserData
 import com.app.demomvvm.databinding.InnerRecyclerBinding
 
 import java.util.*

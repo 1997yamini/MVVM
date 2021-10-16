@@ -2,7 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.demomvvm">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
+        android:name=".DemoMVVMApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,10 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoMVVM">
         <activity
-            android:name=".FormActivity"
+            android:name=".ui.main.view.activity.ContactUsActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.main.view.activity.FormActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.main.view.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +33,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:name=".ui.main.view.activity.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,9 +1,12 @@
-package com.app.demomvvm
+package com.app.demomvvm.ui.main.view.fragment
 
 import android.content.Context
 import android.content.Intent
 import android.view.View
+import com.app.demomvvm.R
 import com.app.demomvvm.databinding.FragmentHomeBinding
+import com.app.demomvvm.ui.base.BaseFragment
+import com.app.demomvvm.ui.main.view.activity.FormActivity
 
 class HomeFragment() : BaseFragment<FragmentHomeBinding>() {
     private var clickAction: ClickAction? = null

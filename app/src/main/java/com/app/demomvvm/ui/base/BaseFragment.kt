@@ -1,4 +1,4 @@
-package com.app.demomvvm
+package com.app.demomvvm.ui.base
 
 import android.app.Dialog
 import android.os.Bundle

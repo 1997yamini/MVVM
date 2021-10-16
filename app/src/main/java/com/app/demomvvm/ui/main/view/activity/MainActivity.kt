@@ -1,13 +1,14 @@
-package com.app.demomvvm
+package com.app.demomvvm.ui.main.view.activity
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.app.demomvvm.R
+import com.app.demomvvm.data.model.response.UserData
+import com.app.demomvvm.ui.adapter.UserListAdapter
 import com.app.demomvvm.databinding.ActivityMainBinding
+import com.app.demomvvm.ui.base.BaseActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.r.fia.preferences.PrefEntity
@@ -15,8 +16,8 @@ import com.r.fia.preferences.Preferences
 import java.lang.reflect.Type
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-    private var clickAction:ClickAction? = null
-    private lateinit var adapter:UserListAdapter
+    private var clickAction: ClickAction? = null
+    private lateinit var adapter: UserListAdapter
     private var userList: ArrayList<UserData>? = ArrayList()
 
 
@@ -45,7 +46,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun setClickAction() {
         clickAction = ClickAction(this)
-        binding.setClickAction(clickAction)
+        binding.setClickAction(this)
 
     }
 
@@ -64,10 +65,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
 
     fun setAdatpter(){
-        adapter=UserListAdapter(this,userList!!)
+        adapter= UserListAdapter(this,userList!!)
         binding.recyclerUser.adapter=adapter
     }
-    override fun getLayout(): Int =R.layout.activity_main
+    override fun getLayout(): Int = R.layout.activity_main
 
     class ClickAction(var context: Context?) {
 

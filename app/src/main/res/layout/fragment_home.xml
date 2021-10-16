@@ -5,13 +5,13 @@
 
         <variable
             name="ClickAction"
-            type="com.app.demomvvm.HomeFragment.ClickAction" />
+            type="com.app.demomvvm.ui.main.view.fragment.HomeFragment" />
 
     </data>
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.main.view.fragment.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -28,7 +28,6 @@
         android:layout_gravity="end|bottom"
         android:src="@drawable/ic_add"
         android:layout_margin="16dp"
-        android:onClick="@{ClickAction.OpenForm}"
         tools:ignore="ContentDescription" />
 
 </FrameLayout>

@@ -2,4 +2,14 @@
     <string name="app_name">MVVM DEMO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ops_something_went_wrong">Oops something went wrong</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="OFFC_ADD1">Office address 1</string>
+    <string name="OFFC_ADD2">Office Address 2</string>
+    <string name="OFFC_ADD3">Office Address 3</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="contact_number">contact number</string>
+    <string name="your_query">your query</string>
+    <string name="submit">Sumit</string>
 </resources>

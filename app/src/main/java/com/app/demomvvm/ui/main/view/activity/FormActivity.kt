@@ -1,29 +1,24 @@
-package com.app.demomvvm
+package com.app.demomvvm.ui.main.view.activity
 
 import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
 import com.app.demomvvm.databinding.ActivityFormBinding
 import android.widget.Toast
 
 import com.google.gson.Gson
 
-import android.content.SharedPreferences
-
-import android.content.Context.MODE_PRIVATE
 import android.util.Log
+import com.app.demomvvm.R
+import com.app.demomvvm.data.model.response.UserData
 
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.app.demomvvm.ui.base.BaseActivity
 import com.r.fia.preferences.PrefEntity
 import com.r.fia.preferences.Preferences
 
 class FormActivity : BaseActivity<ActivityFormBinding>() {
 
-    private var clickAction:ClickAction?=null
+    private var clickAction: ClickAction?=null
     private var userList: ArrayList<UserData>? = ArrayList()
 
     override fun initView() {
@@ -38,14 +33,14 @@ class FormActivity : BaseActivity<ActivityFormBinding>() {
 
     private fun setClickAction() {
         clickAction= ClickAction(this)
-        binding.clickActionForm=clickAction
+        binding.clickActionForm=this
     }
 
 
     override fun setListener() {
         binding.btnsave.setOnClickListener {
             if(isValidate()){
-                val userData=UserData()
+                val userData= UserData()
                 userData.Name = binding.etname.text.toString()
                 userList!!.add(userData)
                saveData()
@@ -79,7 +74,7 @@ class FormActivity : BaseActivity<ActivityFormBinding>() {
 
     }
 
-    override fun getLayout(): Int =R.layout.activity_form
+    override fun getLayout(): Int = R.layout.activity_form
 
     class ClickAction(var context: Context?) {
 

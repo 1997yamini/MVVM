@@ -3,11 +3,11 @@
     <data>
         <variable
             name="clickActionForm"
-            type="com.app.demomvvm.FormActivity.ClickAction" />
+            type="com.app.demomvvm.ui.main.view.activity.FormActivity" />
 
         <variable
             name="userData"
-            type="com.app.demomvvm.UserData" />
+            type="com.app.demomvvm.data.model.response.UserData" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
